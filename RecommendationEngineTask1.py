@@ -133,6 +133,10 @@ else:
 
         result_df=pd.DataFrame({'Recommendations for user':non_cold_start_recos})
 
-        result_df
+        k_recos=st.slider("Choose K for showing 'Top K' preferred offers",min_value=1,max_value=10,value=5)
+
+        result_df.iloc[:k_recos]
+
+        #result_df
 
   
